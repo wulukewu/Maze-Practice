@@ -65,8 +65,8 @@ There are two heuristic functions now:
 # How to build
 
 ```bash
-git clone https://github.com/Mes0903/Mes_Imgui_template.git
-cd Mes_Imgui_template
+git clone git@github.com:OpenMCL/Maze-Practice.git
+cd Maze-Practice
 git submodule init
 git submodule update
 mkdir build && cd build
