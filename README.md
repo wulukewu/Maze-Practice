@@ -1,6 +1,6 @@
 # Maze-Practice
 
-This is a project for MCL students to practice C++. Some functions have been left unimplemented, and the complete implementation can be found in *[Maze](https://github.com/Mes0903/Mase)*.
+This is a project for MCL students to practice C++. Some functions have been left unimplemented, and the complete implementation can be found in *[Mase](https://github.com/Mes0903/Mase)*.
 
 *Mase* is an cross platform project for the visualization of maze generalization and maze solver algorithm.
 
