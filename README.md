@@ -1,6 +1,6 @@
-# Mase
+# Maze-Practice
 
-The reason this project called Mase is beacause my name is Mes :p
+This is a project for MCL students to practice C++. Some functions have been left unimplemented, and the complete implementation can be found in *[Maze](https://github.com/Mes0903/Mase)*.
 
 *Mase* is an cross platform project for the visualization of maze generalization and maze solver algorithm.
 
@@ -9,6 +9,32 @@ It was made by C++17 and ImGui, with the OpenGL and glfw/glad backend.
 ![](document/mase.gif)
 
 > There was an Qt version before but no longer maintain anymore.
+
+# For students
+
+This project follows the MVC (Model-View-Controller) design pattern. Inside the "Maze" folder, you'll find several files corresponding to Model, View, and Controller.
+
+- The Model is responsible for the main algorithm calculations.
+- The View handles rendering the visuals.
+- The Controller manages the interaction between the Model and View to ensure the program runs properly.
+
+Our exercise aims to let you implement the algorithms in the Model, so you do not need to worry too much about the details of View and Controller. You can still successfully complete the project while focusing primarily on the Model.
+
+Files `MazeModel.h` and `MazeModel.cpp` contain all the details of the Model algorithms and utility functions, while `MazeDefine.h` includes some parameters that you will use.
+
+To draw the maze, you will need to interact with the Controller. Don't worry — we have minimized the required work for this. In the MazeModel class, there is a pointer called `controller_ptr__` for communication with the Controller. You only need to call the function `controller_ptr__->enFramequeue` within your algorithm in the Model to update the display.
+
+I've provided two implementations as examples: `generateMazePrim` and `solveMazeDFS`. One is a maze generation algorithm, and the other is a maze-solving algorithm. You can see how to use `controller_ptr__->enFramequeue` in these examples.
+
+Additionally, each algorithm in the Model must set a complete flag before finishing. You will find that we call `setModelComplete` for this purpose in the current code — please do not remove this call.
+
+Since this course is self-study and doesn't provide any credits, you are free to look at my full implementations if you get stuck. However, I do not recommend doing so unless you have been struggling for a long time, as turning your own ideas into code is an essential skill to develop.
+
+As for the algorithms themselves, I wrote a simple introduction in Chinese four years ago, which you can find in `Maze/README.md`. Alternatively, you can refer to the links at the end of this `README`. These are all classic algorithms, so you can easily find other implementations on GitHub. We also welcome any new explanations you may want to contribute.
+
+Finally, since we will not be grading your assignments, as long as you can get the project running, you are free to modify any files in this project as you see fit.
+
+If you have any questions, please feel free to ask me, and I will assist you to the best of my ability.
 
 # Implemented algorithm
 
