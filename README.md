@@ -65,7 +65,7 @@ There are two heuristic functions now:
 # How to build
 
 ```bash
-git clone git@github.com:OpenMCL/Maze-Practice.git
+git clone https://github.com/OpenMCL/Maze-Practice.git
 cd Maze-Practice
 git submodule init
 git submodule update
