@@ -12,6 +12,8 @@
 #include "MazeController.h"
 #include "MazeView.h"
 
+#include <unistd.h>
+
 MazeView::MazeView(uint32_t height, uint32_t width)
     : render_maze__{ height, std::vector<MazeElement>{ width, MazeElement::GROUND } },
       update_node__{ MazeNode{ -1, -1, MazeElement::INVALID } },
@@ -194,12 +196,15 @@ void MazeView::render()
     // use the time_point to limit the fps, come from https://stackoverflow.com/questions/38730273/how-to-limit-fps-in-a-loop-with-c
     if (limit_fps__)
       frame__ += std::chrono::milliseconds(1000 / fps__);
+      // frame__ += 1000/fps__;
 
     renderer__.setNewFrame__();
     drawGUI__();
     renderer__.render__();
 
     if (limit_fps__)
-      std::this_thread::sleep_until(frame__);
+      // std::this_thread::sleep_until(frame__);
+      // std::this_thread::sleep_for(std::chrono::milliseconds(250));
+      usleep(25000);
   }
 }
